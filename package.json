@@ -1,0 +1,53 @@
+{
+  "name": "vue-crontab-generator",
+  "version": "1.0.1",
+  "description": "A crontab expression generator component based on vue and element-ui",
+  "main": "./lib/index.js",
+  "types": "./types/src/index.d.ts",
+  "directories": {
+    "test": "test"
+  },
+  "homepage": "https://github.com/king-peach/vue-crontab-generator.git",
+  "github": "https://github.com/king-peach/vue-crontab-generator.git",
+  "scripts": {
+    "start": "webpack serve --mode=development --config ./config/webpack.config.js",
+    "build": "webpack --mode=production --config ./config/webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "crontab",
+    "cron",
+    "vue-cron",
+    "vue-corntab",
+    "vue-cron-generator",
+    "vue-crontab-generator"
+  ],
+  "author": "wangtao <wtiroo@163.com> (https://github.com/king-peach)",
+  "license": "MIT",
+  "dependencies": {
+    "element-ui": "2.x",
+    "vue": "~2.6",
+    "vue-property-decorator": "^8.3.0"
+  },
+  "devDependencies": {
+    "css-loader": "^6.7.3",
+    "html-webpack-plugin": "^5.5.0",
+    "sass": "^1.59.2",
+    "sass-loader": "^13.2.0",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.2",
+    "vue-loader": "15",
+    "vue-style-loader": "^4.1.3",
+    "vue-template-compiler": "^2.6.14",
+    "webpack": "^5.76.1",
+    "webpack-bundle-analyzer": "^4.8.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1",
+    "webpack-merge": "^5.8.0",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "files": [
+    "/lib",
+    "/types"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "outDir": "./types/",
+    "target": "es5",
+    "module": "es6",
+    "declaration": true,
+    "declarationDir": "./types/",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strictNullChecks": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}
