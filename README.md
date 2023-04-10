@@ -29,7 +29,7 @@ npm install vue-crontab-generator
 
 Yarn:
 ```
-yarn add install vue-crontab-generator
+yarn add vue-crontab-generator
 ```
 
 ## Example
