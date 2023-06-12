@@ -63,6 +63,7 @@ export default class Example extends Vue {
 | periods | Expression format rules, according to the default value to add or delete configuration | "{s} {m} {h} {d} {M} {W} {Y}" |
 | showText | Show bottom crontab expression | true |
 | selectPopperClass | el-select popper-class property | "" |
+| disabled | readonly parameter | false |
 
 ## method
 | name | description | params |

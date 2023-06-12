@@ -8,16 +8,17 @@
         </span>
         <div class="tabBody">
           <el-row>
-            <el-radio v-model="second.cronEvery" label="1">
+            <el-radio :disabled="disabled" v-model="second.cronEvery" label="1">
               {{ text.Seconds.every }}
             </el-radio>
           </el-row>
           <el-row>
-            <el-radio v-model="second.cronEvery" label="2">
+            <el-radio v-model="second.cronEvery" :disabled="disabled" label="2">
               {{ text.Seconds.interval[0] }}
               <el-input-number
                 v-model="second.incrementStart"
                 size="small"
+                :disabled="disabled"
                 :min="0"
                 :max="59"
               />
@@ -25,6 +26,7 @@
               <el-input-number
                 v-model="second.incrementIncrement"
                 size="small"
+                :disabled="disabled"
                 :min="1"
                 :max="60"
               />
@@ -32,12 +34,13 @@
             </el-radio>
           </el-row>
           <el-row>
-            <el-radio v-model="second.cronEvery" class="long" label="3">
+            <el-radio v-model="second.cronEvery" :disabled="disabled" class="long" label="3">
               {{ text.Seconds.specific }}
               <el-select
                 v-model="second.specificSpecific"
                 :placeholder="text.Placeholder.select"
                 :popper-class="selectPopperClass"
+                :disabled="disabled"
                 clearable
                 size="small"
                 class="v-select_w_180"
@@ -50,11 +53,12 @@
             </el-radio>
           </el-row>
           <el-row>
-            <el-radio v-model="second.cronEvery" label="4">
+            <el-radio v-model="second.cronEvery" :disabled="disabled" label="4">
               {{ text.Seconds.cycle[0] }}
               <el-input-number
                 v-model="second.rangeStart"
                 size="small"
+                :disabled="disabled"
                 :min="1"
                 :max="60"
               />
@@ -62,6 +66,7 @@
               <el-input-number
                 v-model="second.rangeEnd"
                 size="small"
+                :disabled="disabled"
                 :min="0"
                 :max="59"
               />
@@ -77,16 +82,17 @@
         </span>
         <div class="tabBody">
           <el-row>
-            <el-radio v-model="minute.cronEvery" label="1">
+            <el-radio v-model="minute.cronEvery" :disabled="disabled" label="1">
               {{ text.Minutes.every }}
             </el-radio>
           </el-row>
           <el-row>
-            <el-radio v-model="minute.cronEvery" label="2">
+            <el-radio v-model="minute.cronEvery" :disabled="disabled" label="2">
               {{ text.Minutes.interval[0] }}
               <el-input-number
                 v-model="minute.incrementStart"
                 size="small"
+                :disabled="disabled"
                 :min="0"
                 :max="59"
               />
@@ -94,6 +100,7 @@
               <el-input-number
                 v-model="minute.incrementIncrement"
                 size="small"
+                :disabled="disabled"
                 :min="1"
                 :max="60"
               />
@@ -101,12 +108,13 @@
             </el-radio>
           </el-row>
           <el-row>
-            <el-radio v-model="minute.cronEvery" class="long" label="3">
+            <el-radio v-model="minute.cronEvery" :disabled="disabled" class="long" label="3">
               {{ text.Minutes.specific }}
               <el-select
                 v-model="minute.specificSpecific"
                 :placeholder="text.Placeholder.select"
                 :popper-class="selectPopperClass"
+                :disabled="disabled"
                 clearable
                 size="small"
                 class="v-select_w_180"
@@ -119,11 +127,12 @@
             </el-radio>
           </el-row>
           <el-row>
-            <el-radio v-model="minute.cronEvery" label="4">
+            <el-radio v-model="minute.cronEvery" :disabled="disabled" label="4">
               {{ text.Minutes.cycle[0] }}
               <el-input-number
                 v-model="minute.rangeStart"
                 size="small"
+                :disabled="disabled"
                 :min="1"
                 :max="60"
               />
@@ -131,6 +140,7 @@
               <el-input-number
                 v-model="minute.rangeEnd"
                 size="small"
+                :disabled="disabled"
                 :min="0"
                 :max="59"
               />
@@ -146,16 +156,17 @@
         </span>
         <div class="tabBody">
           <el-row>
-            <el-radio v-model="hour.cronEvery" label="1">
+            <el-radio v-model="hour.cronEvery" :disabled="disabled" label="1">
               {{ text.Hours.every }}
             </el-radio>
           </el-row>
           <el-row>
-            <el-radio v-model="hour.cronEvery" label="2">
+            <el-radio v-model="hour.cronEvery" :disabled="disabled" label="2">
               {{ text.Hours.interval[0] }}
               <el-input-number
                 v-model="hour.incrementStart"
                 size="small"
+                :disabled="disabled"
                 :min="0"
                 :max="23"
               />
@@ -163,6 +174,7 @@
               <el-input-number
                 v-model="hour.incrementIncrement"
                 size="small"
+                :disabled="disabled"
                 :min="0"
                 :max="23"
               />
@@ -170,12 +182,13 @@
             </el-radio>
           </el-row>
           <el-row>
-            <el-radio v-model="hour.cronEvery" class="long" label="3">
+            <el-radio v-model="hour.cronEvery" :disabled="disabled" class="long" label="3">
               {{ text.Hours.specific }}
               <el-select
                 v-model="hour.specificSpecific"
                 :placeholder="text.Placeholder.select"
                 :popper-class="selectPopperClass"
+                :disabled="disabled"
                 clearable
                 class="v-select_w_180"
                 size="small"
@@ -188,11 +201,12 @@
             </el-radio>
           </el-row>
           <el-row>
-            <el-radio v-model="hour.cronEvery" label="4">
+            <el-radio v-model="hour.cronEvery" :disabled="disabled" label="4">
               {{ text.Hours.cycle[0] }}
               <el-input-number
                 v-model="hour.rangeStart"
                 size="small"
+                :disabled="disabled"
                 :min="0"
                 :max="23"
               />
@@ -200,6 +214,7 @@
               <el-input-number
                 v-model="hour.rangeEnd"
                 size="small"
+                :disabled="disabled"
                 :min="0"
                 :max="23"
               />
@@ -215,7 +230,7 @@
         </span>
         <div class="tabBody">
           <el-row>
-            <el-radio v-model="day.cronEvery" label="1">
+            <el-radio v-model="day.cronEvery" :disabled="disabled" label="1">
               {{ text.Day.every }}
             </el-radio>
           </el-row>
@@ -225,6 +240,7 @@
               <el-input-number
                 v-model="day.incrementStart"
                 size="small"
+                :disabled="disabled"
                 :min="1"
                 :max="31"
               />
@@ -232,6 +248,7 @@
               <el-input-number
                 v-model="day.incrementIncrement"
                 size="small"
+                :disabled="disabled"
                 :min="1"
                 :max="31"
               />
@@ -239,12 +256,13 @@
             </el-radio>
           </el-row>
           <el-row>
-            <el-radio v-model="day.cronEvery" class="long" label="5" @change="handleLabelChange">
+            <el-radio v-model="day.cronEvery" :disabled="disabled" class="long" label="5" @change="handleLabelChange">
               {{ text.Day.specificDay }}
               <el-select
                 v-model="day.specificSpecific"
                 :placeholder="text.Placeholder.select"
                 :popper-class="selectPopperClass"
+                :disabled="disabled"
                 clearable
                 class="v-select_w_180"
                 size="small"
@@ -257,12 +275,12 @@
             </el-radio>
           </el-row>
           <el-row>
-            <el-radio v-model="day.cronEvery" label="6">
+            <el-radio v-model="day.cronEvery" :disabled="disabled" label="6">
               {{ text.Day.lastDay }}
             </el-radio>
           </el-row>
           <el-row>
-            <el-radio v-model="day.cronEvery" label="7">
+            <el-radio v-model="day.cronEvery" :disabled="disabled" label="7">
               {{ text.Day.lastWeekday }}
             </el-radio>
           </el-row>
@@ -287,11 +305,12 @@
             </el-radio>
           </el-row> -->
           <el-row>
-            <el-radio v-model="day.cronEvery" label="9">
+            <el-radio v-model="day.cronEvery" :disabled="disabled" label="9">
               {{ text.Day.beforeEndMonth[0] }}
               <el-input-number
                 v-model="day.cronDaysBeforeEomMinus"
                 size="small"
+                :disabled="disabled"
                 :min="1"
                 :max="31"
               />
@@ -299,11 +318,12 @@
             </el-radio>
           </el-row>
           <el-row>
-            <el-radio v-model="day.cronEvery" label="10">
+            <el-radio v-model="day.cronEvery" :disabled="disabled" label="10">
               {{ text.Day.nearestWeekday[0] }}
               <el-input-number
                 v-model="day.cronDaysNearestWeekday"
                 size="small"
+                :disabled="disabled"
                 :min="1"
                 :max="31"
               />
@@ -319,16 +339,17 @@
         </span>
         <div class="tabBody">
           <el-row>
-            <el-radio v-model="month.cronEvery" label="1">
+            <el-radio v-model="month.cronEvery" :disabled="disabled" label="1">
               {{ text.Month.every }}
             </el-radio>
           </el-row>
           <el-row>
-            <el-radio v-model="month.cronEvery" label="2">
+            <el-radio v-model="month.cronEvery" :disabled="disabled" label="2">
               {{ text.Month.interval[0] }}
               <el-input-number
                 v-model="month.incrementStart"
                 size="small"
+                :disabled="disabled"
                 :min="0"
                 :max="12"
               />
@@ -336,6 +357,7 @@
               <el-input-number
                 v-model="month.incrementIncrement"
                 size="small"
+                :disabled="disabled"
                 :min="0"
                 :max="12"
               />
@@ -343,12 +365,13 @@
             </el-radio>
           </el-row>
           <el-row>
-            <el-radio v-model="month.cronEvery" class="long" label="3">
+            <el-radio v-model="month.cronEvery" :disabled="disabled" class="long" label="3">
               {{ text.Month.specific }}
               <el-select
                 v-model="month.specificSpecific"
                 :placeholder="text.Placeholder.select"
                 :popper-class="selectPopperClass"
+                :disabled="disabled"
                 clearable
                 class="v-select_w_180"
                 size="small"
@@ -364,11 +387,12 @@
             </el-radio>
           </el-row>
           <el-row>
-            <el-radio v-model="month.cronEvery" label="4">
+            <el-radio v-model="month.cronEvery" :disabled="disabled" label="4">
               {{ text.Month.cycle[0] }}
               <el-input-number
                 v-model="month.rangeStart"
                 size="small"
+                :disabled="disabled"
                 :min="1"
                 :max="12"
               />
@@ -376,6 +400,7 @@
               <el-input-number
                 v-model="month.rangeEnd"
                 size="small"
+                :disabled="disabled"
                 :min="1"
                 :max="12"
               />
@@ -390,12 +415,13 @@
         </span>
         <div class="tabBody">
           <el-row>
-            <el-radio v-model="day.cronEvery" label="2">
+            <el-radio v-model="day.cronEvery" :disabled="disabled" label="2">
               {{ text.Day.intervalWeek[0] }}
               <el-select
                 v-model="week.incrementStart"
                 :placeholder="text.Placeholder.select"
                 :popper-class="selectPopperClass"
+                :disabled="disabled"
                 clearable
                 class="v-select_w_180"
                 size="small"
@@ -411,6 +437,7 @@
               <el-input-number
                 v-model="week.incrementIncrement"
                 size="small"
+                :disabled="disabled"
                 :min="1"
                 :max="7"
               />
@@ -418,12 +445,13 @@
             </el-radio>
           </el-row>
           <el-row>
-            <el-radio v-model="day.cronEvery" class="long" label="4" @change="handleLabelChange">
+            <el-radio v-model="day.cronEvery" :disabled="disabled" class="long" label="4" @change="handleLabelChange">
               {{ text.Day.specificWeek }}
               <el-select
                 v-model="week.specificSpecific"
                 :placeholder="text.Placeholder.select"
                 :popper-class="selectPopperClass"
+                :disabled="disabled"
                 clearable
                 class="v-select_w_180"
                 size="small"
@@ -439,11 +467,12 @@
             </el-radio>
           </el-row>
           <el-row>
-            <el-radio v-model="day.cronEvery" label="11">
+            <el-radio v-model="day.cronEvery" :disabled="disabled" label="11">
               {{ text.Day.someWeekday[0] }}
               <el-input-number
                 v-model="week.cronNthDayNth"
                 size="small"
+                :disabled="disabled"
                 :min="1"
                 :max="5"
               />
@@ -452,6 +481,7 @@
                 v-model="week.cronNthDayDay"
                 :placeholder="text.Placeholder.select"
                 :popper-class="selectPopperClass"
+                :disabled="disabled"
                 clearable
                 class="v-select_w_180"
                 size="small"
@@ -474,16 +504,17 @@
         </span>
         <div class="tabBody">
           <el-row>
-            <el-radio v-model="year.cronEvery" label="1">
+            <el-radio v-model="year.cronEvery" :disabled="disabled" label="1">
               {{ text.Year.every }}
             </el-radio>
           </el-row>
           <el-row>
-            <el-radio v-model="year.cronEvery" label="2">
+            <el-radio v-model="year.cronEvery" :disabled="disabled" label="2">
               {{ text.Year.interval[0] }}
               <el-input-number
                 v-model="year.incrementStart"
                 size="small"
+                :disabled="disabled"
                 :min="2018"
                 :max="2118"
               />
@@ -491,6 +522,7 @@
               <el-input-number
                 v-model="year.incrementIncrement"
                 size="small"
+                :disabled="disabled"
                 :min="1"
                 :max="99"
               />
@@ -498,12 +530,13 @@
             </el-radio>
           </el-row>
           <el-row>
-            <el-radio v-model="year.cronEvery" class="long" label="3">
+            <el-radio v-model="year.cronEvery" :disabled="disabled" class="long" label="3">
               {{ text.Year.specific }}
               <el-select
                 v-model="year.specificSpecific"
                 :placeholder="text.Placeholder.select"
                 :popper-class="selectPopperClass"
+                :disabled="disabled"
                 clearable
                 size="small"
                 class="v-select_w_180"
@@ -520,11 +553,12 @@
             </el-radio>
           </el-row>
           <el-row>
-            <el-radio v-model="year.cronEvery" label="4">
+            <el-radio v-model="year.cronEvery" :disabled="disabled" label="4">
               {{ text.Year.cycle[0] }}
               <el-input-number
                 v-model="year.rangeStart"
                 size="small"
+                :disabled="disabled"
                 :min="2018"
                 :max="2118"
               />
@@ -532,6 +566,7 @@
               <el-input-number
                 v-model="year.rangeEnd"
                 size="small"
+                :disabled="disabled"
                 :min="2018"
                 :max="2118"
               />
@@ -594,6 +629,9 @@ export default class VueCrontab extends Vue {
 
   @Prop({ default: true })
   showText!: string
+
+  @Prop({ default: false })
+  disabled!: boolean
 
   dayOfWeek: string[] = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT']
 
