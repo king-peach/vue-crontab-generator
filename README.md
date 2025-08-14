@@ -3,7 +3,7 @@
 Vue-Crontab is a configurable generator of crontab expressions
 
 ## Preview
-![demo](./assets/vue-crontab-demo.gif)
+![demo](https://linxianglive.cn/vue-crontab-demo.gif)
 
 ## Fearture
 * customer config tabs
